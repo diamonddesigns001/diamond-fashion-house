@@ -3,194 +3,337 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diamond Fashion House</title>
+<title>Diamond Design Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#000;
-color:#fff;
-line-height:1.6;
+background:#0b0b0b;
+color:white;
 }
 
 header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
 background:#111;
-padding:20px;
-text-align:center;
-border-bottom:2px solid gold;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #D4AF37;
+z-index:999;
 }
 
-header h1{
-color:gold;
-font-size:40px;
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#D4AF37;
 }
 
-header p{
-color:#ddd;
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#D4AF37;
 }
 
 .hero{
-padding:80px 20px;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
+padding:140px 20px 80px;
 }
 
-.hero h2{
-font-size:45px;
-color:gold;
+.hero img{
+width:180px;
+height:180px;
+border-radius:50%;
+border:4px solid #D4AF37;
+margin-bottom:30px;
+}
+
+.hero h1{
+font-size:55px;
+color:#D4AF37;
 margin-bottom:20px;
 }
 
 .hero p{
 font-size:20px;
-max-width:700px;
-margin:auto;
+max-width:750px;
+line-height:1.8;
+margin-bottom:35px;
+color:#ddd;
 }
 
 .btn{
 display:inline-block;
-margin-top:30px;
 padding:15px 35px;
-background:gold;
-color:black;
+border-radius:50px;
 text-decoration:none;
 font-weight:bold;
-border-radius:30px;
+margin:10px;
+transition:.3s;
 }
 
-.services{
-padding:60px 20px;
+.gold{
+background:#D4AF37;
+color:black;
+}
+
+.outline{
+border:2px solid #D4AF37;
+color:#D4AF37;
+}
+
+.gold:hover{
+transform:translateY(-5px);
+}
+
+.outline:hover{
+background:#D4AF37;
+color:black;
+}
+
+section{
+padding:100px 8%;
+}
+
+.title{
+font-size:40px;
 text-align:center;
-}
-
-.services h2{
-color:gold;
-margin-bottom:40px;
-}
-
-.cards{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
+color:#D4AF37;
+margin-bottom:50px;
+}.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
 .card{
-background:#111;
-padding:25px;
-width:280px;
-border:1px solid gold;
-border-radius:12px;
+background:#161616;
+padding:35px;
+border-radius:20px;
+text-align:center;
+border:1px solid #222;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:#D4AF37;
 }
 
 .card h3{
-color:gold;
+color:#D4AF37;
 margin-bottom:15px;
 }
 
+.card p{
+color:#ccc;
+line-height:1.7;
+}
+
 .about{
-padding:60px 20px;
-text-align:center;
-background:#111;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+max-width:400px;
+border-radius:20px;
+border:3px solid #D4AF37;
+}
+
+.about p{
+font-size:18px;
+line-height:1.8;
+color:#ddd;
 }
 
 footer{
+background:#111;
+padding:40px;
 text-align:center;
-padding:30px;
-border-top:2px solid gold;
+border-top:1px solid #D4AF37;
 }
 
 footer a{
-color:gold;
+color:#D4AF37;
 text-decoration:none;
 }
 
 @media(max-width:768px){
-.hero h2{
-font-size:32px;
+
+header{
+flex-direction:column;
 }
+
+nav{
+margin-top:15px;
 }
+
+nav a{
+display:inline-block;
+margin:8px;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+.about{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+}
+
 </style>
 
 </head>
+
 <body>
 
 <header>
-<h1>Diamond Fashion House</h1>
-<p>Luxury Fashion • Graphics Design • Copywriting • Branding</p>
+
+<div class="logo">Diamond Design Studio</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+
 </header>
 
 <section class="hero">
-<h2>Creating Luxury Brands That Stand Out</h2>
+
+<img src="logo.png" alt="Diamond Logo">
+
+<h1>Luxury Design That Elevates Brands</h1>
 
 <p>
-Welcome to Diamond Fashion House. We help businesses grow with
-professional graphics design, copywriting, content writing and
-branding solutions that leave lasting impressions.
+Professional Graphics Design, Branding, Copywriting, Content Writing and Business Websites crafted with elegance and creativity.
 </p>
 
-<a href="mailto:diamondkazeem9@gmail.com" class="btn">
-Contact Us
-</a>
+<a href="#contact" class="btn gold">Hire Me</a>
+
+<a href="#services" class="btn outline">My Services</a>
+
 </section>
 
-<section class="services">
-<h2>Our Services</h2>
+<section id="services">
 
-<div class="cards">
+<h2 class="title">My Services</h2>
+
+<div class="services">
 
 <div class="card">
 <h3>Graphics Design</h3>
-<p>Luxury logos, flyers, social media designs and premium branding.</p>
+<p>Luxury flyers, logos, social media designs, business cards and premium branding.</p>
 </div>
 
 <div class="card">
 <h3>Copywriting</h3>
-<p>Persuasive copy that attracts customers and increases sales.</p>
+<p>High-converting copy that attracts customers and increases sales.</p>
 </div>
 
 <div class="card">
 <h3>Content Writing</h3>
-<p>Professional articles, blogs and engaging website content.</p>
+<p>Professional articles, blogs and website content written with excellence.</p>
 </div>
 
 <div class="card">
-<h3>Brand Identity</h3>
-<p>Helping brands create a strong and memorable identity.</p>
+<h3>Website Design</h3>
+<p>Modern business websites built with clean code and premium layouts.</p>
 </div>
 
 </div>
+
+</section><section id="about">
+
+<h2 class="title">About Me</h2>
+
+<div class="about">
+
+<div>
+
+<img src="logo.png" alt="Diamond Design Studio">
+
+</div>
+
+<div>
+
+<p>
+
+Diamond Design Studio helps businesses build premium brands through elegant graphics design, branding, copywriting, content writing, and modern website development.
+
+Every project is created with professionalism, creativity, and attention to detail to ensure your business stands out from the competition.
+
+</p>
+
+</div>
+
+</div>
+
 </section>
 
-<section class="about">
-<h2 style="color:gold;">About Us</h2>
+<section id="contact">
 
-<p style="max-width:700px;margin:auto;">
-Diamond Fashion House is dedicated to providing elegant,
-professional and creative solutions for businesses and brands.
-Our goal is to transform ideas into premium designs that inspire confidence.
-</p>
+<h2 class="title">Contact Me</h2>
+
+<div style="text-align:center;line-height:2;font-size:18px;">
+
+<p>📧 Email: <a href="mailto:diamondkazeem9@gmail.com">diamondkazeem9@gmail.com</a></p>
+
+<p>📞 Phone: <a href="tel:+2348072489053">08072489053</a></p>
+
+<p>Available for freelance projects worldwide.</p>
+
+<a href="mailto:diamondkazeem9@gmail.com" class="btn gold">Send Email</a>
+
+</div>
 
 </section>
 
 <footer>
 
-<p>Email:
-<a href="mailto:diamondkazeem9@gmail.com">
-diamondkazeem9@gmail.com
-</a>
-</p>
+<p><strong>Diamond Design Studio</strong></p>
 
-<p>Phone: 08072489053</p>
+<p>Luxury Branding • Graphics Design • Copywriting • Content Writing • Website Design</p>
 
-<p style="margin-top:15px;">© 2026 Diamond Fashion House. All Rights Reserved.</p>
+<p style="margin-top:15px;">© 2026 Diamond Design Studio. All Rights Reserved.</p>
 
 </footer>
 
 </body>
-</html>
+
+</html><img src="logo.png" alt="Diamond Logo">
